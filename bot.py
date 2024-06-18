@@ -86,5 +86,6 @@ async def name_changes(ctx, user: discord.User = None):
     else:
         await ctx.response.send_message(f'Something went wrong')
      
-
-bot.run('MTI1MjUwOTIzNjc0Mzc2NjAzNg.GtL7dr.FR6C-fmQYwvMKUEys8xiFT1uUrZJvIoT2owZ0Q')
+    
+id = os.environ.get('key')
+bot.run(id)
