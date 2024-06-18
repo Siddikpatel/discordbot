@@ -3,12 +3,14 @@ import discord
 from discord.ext import commands
 import json
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 intents = discord.Intents.default()
 intents.members = True
 intents.guilds = True
 bot = commands.Bot(command_prefix="!", intents=intents)
-
+id = os.getenv('key', None)
 
 # Load data from JSON file for a specific guild
 def load_data(guild_id):
@@ -87,5 +89,4 @@ async def name_changes(ctx, user: discord.User = None):
         await ctx.response.send_message(f'Something went wrong')
      
     
-id = os.environ.get('key')
 bot.run(id)
