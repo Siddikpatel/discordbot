@@ -87,7 +87,4 @@ async def name_changes(ctx, user: discord.User = None):
         await ctx.response.send_message(f'Something went wrong')
      
 
-f = open("/etc/secrets/key.txt", "r")
-id = f.read()
-f.close()
-bot.run(id)
+bot.run('MTI1MjUwOTIzNjc0Mzc2NjAzNg.GtL7dr.FR6C-fmQYwvMKUEys8xiFT1uUrZJvIoT2owZ0Q')
